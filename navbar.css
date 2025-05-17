@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =================== Navbar ========================= */
+nav {
+  background-color: #f5f5f5;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 10%;
+  margin: 5px -10px;
+  width: 100%;
+}
+
+.test {
+  color: #AF4631;
+  font-size: 30px;
+  font-weight: bolder;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 25px;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav button{
+        margin-left: 30px;
+        padding: 10px 12px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        width: max-content;
+    }
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: #2c2c2c;
+  position: relative;
+  width: max-content;
+}
+
+nav a:hover {
+  color: #007bff;
+  transition: 1ms;
+}
+nav a::after{
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  width: 0;
+  bottom: -6px;
+  left: 0;
+  background-color:#007bff;
+  transition: 0.5s 0.05s;
+}
+nav a:hover::after,.navbar a:hover{
+  color: #007bff;
+  width: 100%;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #e6e5e523;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hidePhone {
+      display: none;
+  }
+  
+  .input:focus {
+      min-width: 250px;
+  }
+}
+
+.menu-btn {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .menu-btn {
+      display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+      width: 100%;
+  }
+
+  .input:focus {
+      min-width: 120px;
+  }
+}
